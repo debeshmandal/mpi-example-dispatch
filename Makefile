@@ -5,7 +5,7 @@ dispatch: dispatch.cpp task.cpp task.h
 
 example: example.cpp task.cpp example.h task.h
 	$(CC) -o example example.cpp task.cpp
-	@mpirun -np 4 ./example
+	mpirun -np 4 ./example
 
 .PHONY: test
 test:

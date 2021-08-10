@@ -25,24 +25,20 @@ The example file provides a template for initialising a simple MPI program. Here
 
 - Initialise MPI using `MPI_Init`
 ```c++
-// initialise MPI
 MPI_Init(&argc, &argv);
 ```
 - Figure out how many processors are being used
 ```c++
-// Get how many processors there are
 int size;
 MPI_Comm_size(MPI_COMM_WORLD, &size);
 ```
 - Figure out which processor we are using
 ```c++
-// Get which processor this is
 int rank;
 MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 ```
 - Get the processor name (on a PC this would typically just be your machine name)
 ```c++
-// Get the name of the processor
 char name[MPI_MAX_PROCESSOR_NAME];
 int name_length;
 MPI_Get_processor_name(name, &name_length);
