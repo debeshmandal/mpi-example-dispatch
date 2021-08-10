@@ -40,7 +40,7 @@ int main (int argc, char **argv) {
   // print finished statement
   printf("Finished [%d]!\n", rank);
 
-  // put in barrier
+  // put in barrier to wait for every processor to complete
   MPI_Barrier(MPI_COMM_WORLD);
 
   // get time at the end

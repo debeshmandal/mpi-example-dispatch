@@ -6,7 +6,7 @@ A use-case for this model is when running many molecular simulations in parallel
 
 At the current time of writing, there is no MPI communication presented but this may be added in the future, for example to demonstrate a simulation where particles or energy are exchanged between parallel systems at different temperatures.
 
-The example is designed to run on Linux systems and has been tested on WSL2 running Ubuntu - hence we imagine that it would work on most Ubuntu systems. The main prerequisites are:
+The example is designed to run on Linux systems and has been tested on WSL2 running Ubuntu - hence we imagine that it would work on most Linux systems. The main prerequisites are:
 
 - MPI (either `mpich` or `openmpi`)
 
@@ -46,4 +46,9 @@ MPI_Get_processor_name(name, &name_length);
 - Finally use `MPI_Finalize` to tidy everything up
 ```c++
 MPI_Finalize();
+```
+To run the main program which is called `dispatch`
+```bash
+make
+make test
 ```
